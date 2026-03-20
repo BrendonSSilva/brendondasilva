@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brendon Silva — Desenvolvedor Full-Stack</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <!-- Background fixo com manchas amarelas para todo o site -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-blob bg-blob-1"></div>
+    <div class="bg-blob bg-blob-2"></div>
+    <div class="bg-blob bg-blob-3"></div>
+    <div class="bg-blob bg-blob-4"></div>
+  </div>
+
+  <!-- =============================================
+       NAVEGAÇÃO — dropdown centralizado (estilo original)
+       ============================================= -->
+  <header id="header">
+    <nav class="navbar">
+
+      <!-- Botão "Menu ▾" que abre/fecha os links -->
+      <div class="nav-center">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-haspopup="true">
+          Menu <span class="menu-arrow">▾</span>
+        </button>
+
+        <!-- Dropdown com os links de navegação -->
+        <ul class="menu-dropdown" id="menuDropdown">
+          <li><a href="#sobre"     class="nav-item">Sobre mim</a></li>
+          <li><a href="#formacao"  class="nav-item">Formação</a></li>
+          <li><a href="#portfolio" class="nav-item">Portfólio</a></li>
+          <li><a href="#contato"   class="nav-item">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Botão de tema — separado, no canto direito -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <span class="theme-icon">☀️</span>
+      </button>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =============================================
+         SEÇÃO 1 — SOBRE MIM
+         (hero + serviços + IA + tech strip)
+         ============================================= -->
+    <section id="sobre" class="section section-sobre">
+
+      <!-- ---- Hero ---- -->
+      <div class="container hero-grid">
+
+        <!-- Texto de apresentação (esquerda) -->
+        <div class="hero-texto">
+          <h1 class="hero-nome">Brendon S. da Silva</h1>
+
+          <ul class="hero-lista">
+            <li><span class="label">Desenvolvedor:</span> Crio soluções inovadoras com diversas linguagens e frameworks modernos.</li>
+            <li><span class="label">Designer:</span> Transformo ideias em interfaces visuais atrativas e funcionais.</li>
+            <li><span class="label">Social Media:</span> Aumento presença online e engajamento com estratégias criativas.</li>
+            <li><span class="label">Edição de Vídeos:</span> Produzo e edito vídeos envolventes com serviço rápido e de qualidade.</li>
+          </ul>
+
+          <a href="#contato" class="btn btn-primary">💬 Contato</a>
+        </div>
+
+        <!-- Visual direito: apenas a imagem hero (oculta em mobile via CSS) -->
+        <div class="hero-visual">
+          <img src="imagens/hero/code-hero.webp" alt="Brendon Silva" class="hero-img" />
+        </div>
+
+      </div>
+
+      <!-- ---- Serviços ---- -->
+      <div class="servicos-area container">
+        <h2 class="servicos-titulo">Serviços</h2>
+        <p class="servicos-sub">Conheça mais sobre meus serviços</p>
+
+        <div class="servicos-grid">
+
+          <!-- Sites -->
+          <article class="servico-card">
+            <img src="imagens/servicos/www.png" alt="Sites" class="servico-icon" />
+            <h3>Sites</h3>
+            <p>Criação de sites completos, responsivos e otimizados para SEO. Garantimos um design atrativo e funcional.</p>
+          </article>
+
+          <!-- Design Gráfico / UX-UI -->
+          <article class="servico-card">
+            <img src="imagens/servicos/designgrafico.png" alt="Design Gráfico, UX/UI" class="servico-icon" />
+            <h3>Design Gráfico, UX/UI</h3>
+            <p>Desenvolvemos identidades visuais impactantes e interfaces intuitivas, melhorando a experiência do usuário.</p>
+          </article>
+
+          <!-- Social Media -->
+          <article class="servico-card">
+            <img src="imagens/servicos/socialmedia.png" alt="Social Media" class="servico-icon" />
+            <h3>Social Media</h3>
+            <p>Gestão completa de redes sociais, incluindo criação de conteúdo, planejamento estratégico e análise de desempenho.</p>
+          </article>
+
+          <!-- Editor de Vídeos -->
+          <article class="servico-card">
+            <img src="imagens/servicos/capcut.png" alt="Editor de Vídeos" class="servico-icon" />
+            <h3>Editor de Vídeos</h3>
+            <p>Edição profissional de vídeos para promover sua marca, produtos ou serviços com alta qualidade.</p>
+          </article>
+
+        </div>
+
+        <div class="servicos-cta">
+          <a href="#contato" class="btn btn-primary">💬 Contato</a>
+        </div>
+      </div>
+
+      <!-- ---- Ferramentas de IA ---- -->
+      <div class="container ia-area">
+        <p class="ia-label">Ferramentas de IA que utilizo</p>
+        <div class="ia-cards">
+
+          <div class="ia-card">
+            <div class="ia-icon ia-claude">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="ia-info">
+              <span class="ia-nome">Claude</span>
+              <span class="ia-subs">Code · Coworker · Artifacts</span>
+            </div>
+          </div>
+
+          <div class="ia-card">
+            <div class="ia-icon ia-gemini">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 4l2.5 5.5L20 14l-5.5 2.5L12 22l-2.5-5.5L4 14l5.5-2.5L12 6z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="ia-info">
+              <span class="ia-nome">Gemini</span>
+              <span class="ia-subs">Google · Workspace</span>
+            </div>
+          </div>
+
+          <div class="ia-card">
+            <div class="ia-icon ia-chatgpt">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="ia-info">
+              <span class="ia-nome">ChatGPT</span>
+              <span class="ia-subs">OpenAI · Canvas</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ---- Carrossel de tecnologias (3 sets → loop perfeito em qualquer tela) ---- -->
+      <div class="tech-strip" aria-label="Tecnologias">
+        <div class="tech-strip-inner">
+
+          <!-- SET 1 -->
+          <a href="https://nodejs.org/docs/latest/api/"                     target="_blank" rel="noopener" class="tech-item" title="Node.js">  <img src="imagens/tech/nodejs.svg"  alt="Node.js" /></a>
+          <a href="https://www.mongodb.com/docs/"                           target="_blank" rel="noopener" class="tech-item" title="MongoDB">   <img src="imagens/tech/mongodb.svg" alt="MongoDB" /></a>
+          <a href="https://dev.mysql.com/doc/"                              target="_blank" rel="noopener" class="tech-item" title="MySQL">     <img src="imagens/tech/mysql.svg"   alt="MySQL" /></a>
+          <a href="https://react.dev"                                       target="_blank" rel="noopener" class="tech-item" title="React.js">  <img src="imagens/tech/reactjs.svg" alt="React.js" /></a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener" class="tech-item" title="JavaScript"><img src="imagens/tech/js.svg"      alt="JavaScript" /></a>
+          <a href="https://www.typescriptlang.org/docs/"                    target="_blank" rel="noopener" class="tech-item" title="TypeScript"><img src="imagens/tech/ts.svg"      alt="TypeScript" /></a>
+          <a href="https://sass-lang.com/documentation/"                   target="_blank" rel="noopener" class="tech-item" title="Sass">      <img src="imagens/tech/sass.svg"    alt="Sass" /></a>
+          <a href="https://git-scm.com/doc"                                target="_blank" rel="noopener" class="tech-item" title="Git">       <img src="imagens/tech/git.svg"     alt="Git" /></a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"       target="_blank" rel="noopener" class="tech-item" title="CSS3">      <img src="imagens/tech/css.svg"     alt="CSS3" /></a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"      target="_blank" rel="noopener" class="tech-item" title="HTML5">     <img src="imagens/tech/html.svg"    alt="HTML5" /></a>
+          <a href="https://code.visualstudio.com/docs"                     target="_blank" rel="noopener" class="tech-item" title="VS Code">   <img src="imagens/tech/vscode.svg"  alt="VS Code" /></a>
+
+          <!-- SET 2 (cópia) -->
+          <a href="https://nodejs.org/docs/latest/api/"                     target="_blank" rel="noopener" class="tech-item" title="Node.js">  <img src="imagens/tech/nodejs.svg"  alt="Node.js" /></a>
+          <a href="https://www.mongodb.com/docs/"                           target="_blank" rel="noopener" class="tech-item" title="MongoDB">   <img src="imagens/tech/mongodb.svg" alt="MongoDB" /></a>
+          <a href="https://dev.mysql.com/doc/"                              target="_blank" rel="noopener" class="tech-item" title="MySQL">     <img src="imagens/tech/mysql.svg"   alt="MySQL" /></a>
+          <a href="https://react.dev"                                       target="_blank" rel="noopener" class="tech-item" title="React.js">  <img src="imagens/tech/reactjs.svg" alt="React.js" /></a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener" class="tech-item" title="JavaScript"><img src="imagens/tech/js.svg"      alt="JavaScript" /></a>
+          <a href="https://www.typescriptlang.org/docs/"                    target="_blank" rel="noopener" class="tech-item" title="TypeScript"><img src="imagens/tech/ts.svg"      alt="TypeScript" /></a>
+          <a href="https://sass-lang.com/documentation/"                   target="_blank" rel="noopener" class="tech-item" title="Sass">      <img src="imagens/tech/sass.svg"    alt="Sass" /></a>
+          <a href="https://git-scm.com/doc"                                target="_blank" rel="noopener" class="tech-item" title="Git">       <img src="imagens/tech/git.svg"     alt="Git" /></a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"       target="_blank" rel="noopener" class="tech-item" title="CSS3">      <img src="imagens/tech/css.svg"     alt="CSS3" /></a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"      target="_blank" rel="noopener" class="tech-item" title="HTML5">     <img src="imagens/tech/html.svg"    alt="HTML5" /></a>
+          <a href="https://code.visualstudio.com/docs"                     target="_blank" rel="noopener" class="tech-item" title="VS Code">   <img src="imagens/tech/vscode.svg"  alt="VS Code" /></a>
+
+          <!-- SET 3 (cópia) — necessário para telas muito largas não verem a emenda -->
+          <a href="https://nodejs.org/docs/latest/api/"                     target="_blank" rel="noopener" class="tech-item" title="Node.js">  <img src="imagens/tech/nodejs.svg"  alt="Node.js" /></a>
+          <a href="https://www.mongodb.com/docs/"                           target="_blank" rel="noopener" class="tech-item" title="MongoDB">   <img src="imagens/tech/mongodb.svg" alt="MongoDB" /></a>
+          <a href="https://dev.mysql.com/doc/"                              target="_blank" rel="noopener" class="tech-item" title="MySQL">     <img src="imagens/tech/mysql.svg"   alt="MySQL" /></a>
+          <a href="https://react.dev"                                       target="_blank" rel="noopener" class="tech-item" title="React.js">  <img src="imagens/tech/reactjs.svg" alt="React.js" /></a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener" class="tech-item" title="JavaScript"><img src="imagens/tech/js.svg"      alt="JavaScript" /></a>
+          <a href="https://www.typescriptlang.org/docs/"                    target="_blank" rel="noopener" class="tech-item" title="TypeScript"><img src="imagens/tech/ts.svg"      alt="TypeScript" /></a>
+          <a href="https://sass-lang.com/documentation/"                   target="_blank" rel="noopener" class="tech-item" title="Sass">      <img src="imagens/tech/sass.svg"    alt="Sass" /></a>
+          <a href="https://git-scm.com/doc"                                target="_blank" rel="noopener" class="tech-item" title="Git">       <img src="imagens/tech/git.svg"     alt="Git" /></a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"       target="_blank" rel="noopener" class="tech-item" title="CSS3">      <img src="imagens/tech/css.svg"     alt="CSS3" /></a>
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"      target="_blank" rel="noopener" class="tech-item" title="HTML5">     <img src="imagens/tech/html.svg"    alt="HTML5" /></a>
+          <a href="https://code.visualstudio.com/docs"                     target="_blank" rel="noopener" class="tech-item" title="VS Code">   <img src="imagens/tech/vscode.svg"  alt="VS Code" /></a>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =============================================
+         SEÇÃO 2 — FORMAÇÃO
+         Esquerda: credenciais com logo + link
+         Direita: título + descrição
+         ============================================= -->
+    <section id="formacao" class="section section-formacao">
+      <div class="container formacao-grid">
+
+        <!-- Coluna esquerda: lista de credenciais (estilo original) -->
+        <div class="formacao-creds">
+
+          <!-- OneBitCode — vários cursos -->
+          <div class="cred-grupo">
+            <div class="cred-logo-wrap">
+              <img src="imagens/formacao/obc.webp" alt="OneBitCode" class="cred-logo" />
+            </div>
+            <div class="cred-lista">
+              <div class="cred-item">
+                <span class="cred-escola">OneBitCode</span>
+                <span class="cred-curso">Desenvolvimento Back-End | 11/23 - 01/24</span>
+                
+              </div>
+              <div class="cred-item">
+                <span class="cred-escola">OneBitCode</span>
+                <span class="cred-curso">Banco de Dados | 12/23 - 01/24</span>
+                
+              </div>
+              <div class="cred-item">
+                <span class="cred-escola">OneBitCode</span>
+                <span class="cred-curso">React.Js | 12/23 - 01/24</span>
+                
+              </div>
+              <div class="cred-item">
+                <span class="cred-escola">OneBitCode</span>
+                <span class="cred-curso">Next.Js | 12/23 - 01/24</span>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- B7Web -->
+          <div class="cred-grupo">
+            <div class="cred-logo-wrap">
+              <img src="imagens/formacao/b7web.webp" alt="B7Web" class="cred-logo" />
+            </div>
+            <div class="cred-lista">
+              <div class="cred-item">
+                <span class="cred-escola">B7Web</span>
+                <span class="cred-curso">JavaScript | 01/22 - 05/22</span>
+                
+              </div>
+            </div>
+          </div>
+
+          <!-- UNINTER -->
+          <div class="cred-grupo">
+            <div class="cred-logo-wrap">
+              <img src="imagens/formacao/uninter.jpg" alt="UNINTER" class="cred-logo" />
+            </div>
+            <div class="cred-lista">
+              <div class="cred-item">
+                <span class="cred-escola">UNINTER</span>
+                <span class="cred-curso">Bacharelado em Engenharia de Software | Em andamento</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Coluna direita: descrição + idiomas -->
+        <div class="formacao-desc">
+          <h2 class="section-title">Formação <span>e Cursos</span></h2>
+          <p class="formacao-texto">
+            Optei por cursos profissionalizantes e projetos próprios, seguindo conselhos valiosos de profissionais experientes e grandes empresas. Essa abordagem prática e focada me permitiu adquirir habilidades relevantes e aplicáveis no mercado, aprimorando continuamente meu conhecimento e competências.
+          </p>
+
+          <div class="idiomas">
+            <h3 class="idiomas-titulo">Idiomas</h3>
+            <p>Inglês — Intermediário para conversação, escritura e leitura.</p>
+            <p>Português — Nativo.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Botão de contato intermediário (estilo original) -->
+      <div class="section-cta">
+        <a href="#contato" class="btn btn-primary">💬 Contato</a>
+      </div>
+
+    </section>
+
+    <!-- =============================================
+         SEÇÃO 3 — PORTFÓLIO
+         Cards no estilo original: logo + título + botão
+         ============================================= -->
+    <section id="portfolio" class="section section-portfolio">
+      <div class="container">
+
+        <!-- Título com botão '!' para o projeto original em React+Vite -->
+        <div class="portfolio-header-area">
+          <div>
+            <h2 class="section-title">Portfólio <span>&amp; Experiências</span></h2>
+            <p class="section-sub">Projetos desenvolvidos e experiências profissionais</p>
+          </div>
+          <button class="btn-info-original" id="btnOriginal" aria-label="Sobre o projeto original">!</button>
+          <div class="popup-original" id="popupOriginal">
+            <p>Este portfólio foi inspirado em uma versão anterior feita com <strong>React + Vite</strong>. Algumas informações lá estão desatualizadas — esta é a versão atual.</p>
+            <a href="https://github.com/BrendonSSilva/portfolio" target="_blank" rel="noopener" class="popup-link">Ver projeto original →</a>
+          </div>
+        </div>
+
+        <!-- Grade de projetos -->
+        <div class="portfolio-grid">
+
+          <!-- AGEDES (atual) -->
+          <article class="portfolio-card">
+            <div class="portfolio-logo-area">
+              <span class="portfolio-logo-text">AGEDES</span>
+              <span class="badge-atual">Atual</span>
+            </div>
+            <div class="portfolio-info">
+              <h3>AGEDES Web Solutions</h3>
+              <p class="portfolio-cargo">Full Stack | Mai 2024 – Presente</p>
+              <p class="portfolio-desc">Sistemas e sites personalizados para imobiliárias e estoques, com foco em automação e modelagem de dados complexa.</p>
+              <div class="portfolio-tags">
+                <span>PHP</span><span>JavaScript</span><span>MySQL</span><span>Git</span>
+              </div>
+              <a href="https://agedes.com.br" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Detalhes</a>
+            </div>
+          </article>
+
+          <!-- Local Zoom -->
+          <article class="portfolio-card">
+            <div class="portfolio-logo-area">
+              <span class="portfolio-logo-text">Local Zoom</span>
+              <span class="badge-atual">Atual</span>
+            </div>
+            <div class="portfolio-info">
+              <h3>Local Zoom</h3>
+              <p class="portfolio-cargo">Full Stack | Abr 2024 – Presente</p>
+              <p class="portfolio-desc">Plataforma desenvolvida do zero com API REST completa, Node.js + MongoDB, foco em SEO e UI/UX.</p>
+              <div class="portfolio-tags">
+                <span>Node.js</span><span>MongoDB</span><span>EJS</span><span>Vercel</span>
+              </div>
+              <a href="https://localzoom.com.br" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Detalhes</a>
+            </div>
+          </article>
+
+          <!-- SLS Tem -->
+          <article class="portfolio-card">
+            <div class="portfolio-logo-area">
+              <span class="portfolio-logo-text">SLS Tem</span>
+            </div>
+            <div class="portfolio-info">
+              <h3>SLS Tem</h3>
+              <p class="portfolio-cargo">Front-End | Nov 2023 – Mar 2024</p>
+              <p class="portfolio-desc">SPA com Nullstack, rotas dinâmicas, life cycle e controle de dados no LocalStorage.</p>
+              <div class="portfolio-tags">
+                <span>Nullstack</span><span>React.js</span><span>Sass</span>
+              </div>
+              <a href="https://slstem.com.br" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Detalhes</a>
+            </div>
+          </article>
+
+          <!-- Nullstack -->
+          <article class="portfolio-card">
+            <div class="portfolio-logo-area">
+              <span class="portfolio-logo-text">Nullstack</span>
+            </div>
+            <div class="portfolio-info">
+              <h3>Nullstack</h3>
+              <p class="portfolio-cargo">Front-End / Social Media | Fev 2023 – Set 2023</p>
+              <p class="portfolio-desc">Contribuição open-source, testes, tradução da documentação e conteúdo para redes sociais.</p>
+              <div class="portfolio-tags">
+                <span>JavaScript</span><span>Figma</span><span>CapCut</span>
+              </div>
+              <a href="https://nullstack.app" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Detalhes</a>
+            </div>
+          </article>
+
+          <!-- AGEDES anterior -->
+          <article class="portfolio-card">
+            <div class="portfolio-logo-area">
+              <span class="portfolio-logo-text">AGEDES</span>
+            </div>
+            <div class="portfolio-info">
+              <h3>AGEDES Web Solutions</h3>
+              <p class="portfolio-cargo">Front-End / Social Media | Nov 2022 – Mai 2023</p>
+              <p class="portfolio-desc">Landing pages, interfaces e artes para redes sociais com HTML, CSS, JS e Photoshop.</p>
+              <div class="portfolio-tags">
+                <span>HTML</span><span>CSS</span><span>Bootstrap</span>
+              </div>
+              <a href="https://agedes.com.br" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Detalhes</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Botão "Ver Mais" centralizado (estilo original) -->
+        <div class="section-cta">
+          <a href="https://github.com/BrendonSSilva" target="_blank" rel="noopener" class="btn btn-outline">Ver Mais!</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         SEÇÃO 4 — CONTATO
+         ============================================= -->
+    <section id="contato" class="section section-contato">
+      <div class="container contato-grid">
+
+        <!-- Informações e redes sociais -->
+        <div class="contato-info">
+          <h2 class="section-title">Contato <span>&amp; Redes Sociais</span></h2>
+          <p class="section-sub">Vamos conversar sobre seu próximo projeto?</p>
+
+          <div class="redes-sociais">
+            <a href="https://www.linkedin.com/in/brendon-silva/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <img src="imagens/redes/linkedin.svg" alt="LinkedIn" />
+            </a>
+            <a href="https://github.com/BrendonSSilva" target="_blank" rel="noopener" aria-label="GitHub">
+              <img src="imagens/redes/github.svg" alt="GitHub" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <img src="imagens/redes/Instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://wa.me/5553991336621" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <img src="imagens/redes/wpp.svg" alt="WhatsApp" />
+            </a>
+            <a href="mailto:brendon.dasilva03@gmail.com" aria-label="Gmail">
+              <img src="imagens/redes/Gmail.svg" alt="Gmail" />
+            </a>
+          </div>
+
+          <p class="contato-email">brendon.dasilva03@gmail.com</p>
+        </div>
+
+        <!-- Formulário com validação obrigatória em JavaScript -->
+        <form class="contato-form" id="contatoForm" novalidate>
+
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" autocomplete="name" />
+            <span class="erro" id="erroNome"></span>
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" />
+            <span class="erro" id="erroEmail"></span>
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como posso te ajudar?"></textarea>
+            <span class="erro" id="erroMensagem"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Enviar mensagem</button>
+        </form>
+
+      </div>
+
+      <!-- Modal de confirmação de envio -->
+      <div class="modal" id="modalSucesso" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+        <div class="modal-box">
+          <p class="modal-icon">✅</p>
+          <h3 id="modalTitulo">Mensagem enviada com sucesso!</h3>
+          <p>Obrigado pelo contato, Brendon responderá em breve.</p>
+          <button class="btn btn-primary" id="modalFechar">Fechar</button>
+        </div>
+      </div>
+      <div class="modal-overlay" id="modalOverlay"></div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Brendon © 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
